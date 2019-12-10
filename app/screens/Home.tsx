@@ -40,7 +40,6 @@ function Home(): JSX.Element {
       <StatusBar translucent={false} barStyle="light-content" />
       <Header onPress={handleOptionsPress} />
       <KeyboardAvoidingView behavior="padding">
-        {/* <View> */}
         <Logo />
         <InputWithButton
           buttonText={TEMP_BASE_CURRENCY}
@@ -62,7 +61,6 @@ function Home(): JSX.Element {
           conversionRate={TEMP_CONVERSION_RATE}
         />
         <ClearButton text="Reverse Currencies" onPress={handleSwapCurrencies} />
-        {/* </View> */}
       </KeyboardAvoidingView>
     </Container>
   );
