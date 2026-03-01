@@ -3,13 +3,19 @@ import theme from '../../theme';
 
 interface Style {
   container: ViewStyle;
-  containerImage: ViewStyle;
+  imageContainer: ViewStyle;
+  imageBackground: ViewStyle;
   image: ImageStyle;
   text: TextStyle;
 }
 
 const backgroundImageWidth = Dimensions.get('window').width / 2;
-const imageWidth = backgroundImageWidth / 2;
+
+export const largeBackgroundImageWidth = backgroundImageWidth;
+export const largeImageWidth = backgroundImageWidth / 2;
+
+export const smallBackgroundImageWidth = backgroundImageWidth / 2;
+export const smallImageWidth = backgroundImageWidth / 4;
 
 export default StyleSheet.create<Style>({
   container: {
@@ -17,14 +23,18 @@ export default StyleSheet.create<Style>({
     justifyContent: 'center',
     width: '100%',
   },
-  containerImage: {
+  imageContainer: {
+    width: largeBackgroundImageWidth,
+    height: largeBackgroundImageWidth,
+  },
+  imageBackground: {
     alignItems: 'center',
     justifyContent: 'center',
-    width: backgroundImageWidth,
-    height: backgroundImageWidth,
+    width: '100%',
+    height: '100%',
   },
   image: {
-    width: imageWidth,
+    width: largeImageWidth,
   },
   text: {
     fontWeight: '600',
